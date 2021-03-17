@@ -20,8 +20,8 @@ class HornedBeast extends React.Component {
     return(
     <Card 
       style={{ width: '10rem' }}
-      bg="warning"
-      text="muted"
+      bg="lightZZ"
+      text="dark"
       className="beast"
       onClick={this.addFavorite}
       >
