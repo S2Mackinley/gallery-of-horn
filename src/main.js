@@ -1,5 +1,5 @@
 import React from 'react';
-import HornedBeast from './hornedBeast.js';
+import HornedBeast from './hornedBeasts.js';
 import rawData from './data.json';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CardDeck from 'react-bootstrap/CardDeck';
