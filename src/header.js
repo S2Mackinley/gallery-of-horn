@@ -1,10 +1,12 @@
 import React from "react";
 
-function Header() {
+class Header extends React.Component {
+  render() {
   return (
     <div>
         <h1 div="titleheader">Horned Beasts</h1>
     </div>
   );
+}
 }
 export default Header;

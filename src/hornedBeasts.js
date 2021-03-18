@@ -1,43 +1,49 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
-import './hornedBeast.css';
 
-
-class HornedBeast extends React.Component {
+class HornedBeasts extends React.Component {
   constructor(props){
     super(props);
     this.state={
-      favorites: 0
+      numberOfHearts: 0
     }
   }
 
-  addFavorite = () => {
-    this.setState({ favorites: this.state.favorites + 1 });
-  }
+  render () {
+    const hearts = () => {
+      this.setState({ numberOfHearts: this.state.numberOfHearts + 1});
+    }
 
-  render() {
-    return(
-    <Card 
-      style={{ width: '10rem' }}
-      bg="lightZZ"
-      text="dark"
-      className="beast"
-      onClick={this.addFavorite}
-      >
-        <Card.Img variant="bottom" src={this.props.src} />
-        <Card.Body>
-          <Card.Title>{this.props.title}</Card.Title>
-          <Card.Text>
-            ❤️ = {this.state.favorites}
-          </Card.Text>
-          <Card.Text>
-            {this.props.description}
-          </Card.Text>
-        </Card.Body>
-      </Card>
-    )
+    const popOut = () => {
+      this.props.displayAsModal(this.props.index);
+    }
+
+    return (
+      <div>
+
+        <Card className="text-center"
+        style={{ width: '18rem' }}
+        bg="dark"
+        text="light"
+        >
+          <Card.Img 
+          src={this.props.url} 
+          alt={this.props.alt} 
+          title={this.props.title} 
+          onClick={popOut} 
+          />
+
+          <Card.Body>
+            <Card.Title onClick={hearts}>{this.props.title} ❤️ {this.state.numberOfHearts}</Card.Title>
+            <Card.Text onClick={hearts}>
+              {this.props.description}
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </div>
+    );
   }
 }
 
-export default HornedBeast;
+export default HornedBeasts;
