@@ -1,9 +1,18 @@
 h1 {
   text-align: center;
   padding: 4rem 0 5rem 0;
-  background: steelblue;
+  background: burlywood;
+  border-radius: 200px;
+}
+h4 {
+  background: burlywood;
 }
 
-.beast {
-  border: 3px solid black;
+div {
+  text-align: center;
+  margin: 0 auto;
+  padding: 4px;
+}
+body {
+  background: black;
 }
