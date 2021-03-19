@@ -10,22 +10,28 @@ class SelectedBeast extends React.Component {
         show={this.props.show} 
         onHide={this.props.handleClose}
         >
-          <Modal.Dialog>
-            {/* <Modal.Header closeButton></Modal.Header> */}
+          {/* <Modal.Dialog> */}
+            <Modal.Header closeButton>
+            {this.props.favoriteBeast.title}
+            </Modal.Header>
             <Modal.Body>
-              <Card className="text-right"
+              <Card 
                 bg="dark"
                 text="light"
                 onClick={this.displayAsModal}
               >
+
               <Card.Img 
               src={this.props.favoriteBeast.image_url} 
               width={430} alt="some horned animal"
               />
-              </Card>
+
+              
               <Card.Text>
                 {this.props.favoriteBeast.description}
               </Card.Text>
+              
+              </Card>
             </Modal.Body>
 
             <Modal.Footer>
@@ -33,12 +39,9 @@ class SelectedBeast extends React.Component {
             onClick={this.props.handleClose} 
             variant="danger">Close</Button
             >
-            <Button 
-            onClick={this.props.handleClose} 
-            variant="primary">Save</Button
-            >
+
             </Modal.Footer>
-        </Modal.Dialog>
+        {/* </Modal.Dialog> */}
       </Modal>
     )
   }

@@ -2,7 +2,7 @@ h1 {
   text-align: center;
   padding: 4rem 0 5rem 0;
   background: burlywood;
-  border-radius: 200px;
+  border-radius: 20px;
 }
 h4 {
   background: burlywood;
@@ -15,4 +15,9 @@ div {
 }
 body {
   background: black;
+}
+
+.modal-content {
+  display: block;
+  text-align: center;
 }
