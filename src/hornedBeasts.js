@@ -22,7 +22,7 @@ class HornedBeasts extends React.Component {
     return (
       <div>
 
-        <Card className="text-center"
+        <Card 
         style={{ width: '18rem' }}
         bg="dark"
         text="light"
