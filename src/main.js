@@ -1,6 +1,6 @@
 
 import React from 'react';
-import HornedBeast from './hornedbeasts';
+import HornedBeast from './hornedBeasts';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CardDeck from 'react-bootstrap/CardDeck';
 import Horns from './assets/data.json'
