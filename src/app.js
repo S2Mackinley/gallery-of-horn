@@ -23,10 +23,8 @@ class App extends React.Component {
   
   handleClose =() => this.setState({displayModal: false});
   
-  handleFilter = (newData) => {
-    console.log(newData)
-    this.setState({ newData })
-  }
+  handleFilter = (newData) => this.setState({ newData });
+  
 
 
   render () {
